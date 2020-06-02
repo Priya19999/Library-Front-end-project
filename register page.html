@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Book</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="materialize/css/materialize.css">
+   </head>
+   <body>
+    <nav>
+        <div class="nav-wrapper teal lighten-2">
+          <a href="#!" class="brand-logo">CosmosLM</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="login.html"><i class="material-icons right">lock</i>Login</a></li>
+            <li><a href="register.html"><i class="material-icons right">book</i>Register</a></li>
+          </ul>
+        </div>
+      </nav>
+       <div class="card" style = "position:absolute;height:65%;width: 30%; left:35%;top:20%;border-radius: 6px;">
+    <div class="row" style="position:relative;top:3%;">
+		
+				<div class="row">
+					<form class="col s12">
+					  <div class="row">
+						<div class="input-field col s6">
+			
+			  				<i class="material-icons prefix">library_books</i>
+						  <input id="Book Name" type="text" name="name"class="validate">
+						  <label for=" Book Name">Book Name</label>
+						</div>
+					   </div>
+					  <div class="row">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">account_circle</i>
+						  <input id="Author Name" type="text" name="authorName" class="validate">
+						  <label for="Author Name">Author Name</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">format_list_numbered</i>
+						  <input id="ISBN" type="text" name="isbn" class="validate">
+						  <label for="ISBN">Book Number</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">import_contacts</i>
+						  <input id="Publisher" type="text"  name="publisher"class="validate">
+						  <label for="Publisher">Publisher</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="col s12">
+						  <div class="input-field inline">
+							<i class="material-icons prefix">format_align_justify</i>
+							<input id="shelf_inline" type="text" name="shelf" class="validate">
+							<label for="shelf_inline">Shelf Number</label>
+							<span class="helper-text" data-error="wrong" data-success="right"></span>
+						  </div>
+						</div>
+					  </div>
+					  <button class="btn waves-effect waves-light center" type="submit" name="action"> Register Book
+						<i class="material-icons right">send</i>
+					  </button>
+					</form>
+				  </div>
+			</div>
+		  </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+	</script>
+   </body>
+
+
+</html>

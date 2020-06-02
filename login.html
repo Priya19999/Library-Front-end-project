@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="materialize/css/materialize.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+          <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+          <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#!" class="brand-logo">CosmosLM</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html"><i class="material-icons right">lock</i>Login</a></li>
+        <li><a href="register.html"><i class="material-icons right">book</i>Register</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="card" style="position:absolute;left:35%;top:30%;width:25%;height:27%;border-radius:6px;">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                    <input id="Username" type="text" class="validate">
+                    <label for="Username">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">fingerprint</i>
+                    <input id="Password" type="password" class="validate">
+                    <label for="Password">Password</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light center" type="submit" name="action">Login
+                    <i class="material-icons right">lock</i>
+                </button>
+                <button class="btn waves-effect waves-light center" type="submit" name="action">Forgot Password
+                    <i class="material-icons right">help_outline</i>
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <script>
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left',
+      hoverEnabled: false
+    });
+  });</script>
+</body>
+</html>

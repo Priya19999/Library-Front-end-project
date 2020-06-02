@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="materialize/css/materialize.css">
+	<title>Issue Page</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC|Libre+Caslon+Text&display=swap" rel="stylesheet">
+</head>
+<style>
+  #preview{
+    border-radius:12px;
+  }
+  table {
+			border-collapse: collapse;
+			}
+		table#table1 {
+           width:100%;
+		       margin-top:5%;
+           margin-left:1%; 
+           margin-right:10%;
+         }
+		  
+		  th{
+			text-align:center;
+			padding: 18px;
+			border:6px;
+            margin:10px;
+			position: relative;
+
+		  }
+		  td{
+			  height:70%;
+        text-align: center;
+		  }
+		  
+		  tr:nth-child(even)
+		  {background-color: #f2f2f2
+		      }
+		  
+		  th {
+			padding:1%;
+			background-color: teal;
+			color: white;
+            letter-spacing:1px;
+            height: 10%;
+            width: 15%;
+		  }
+</style>
+<body>
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#!" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/login.html"><i class="material-icons right">lock</i>Login</a></li>
+        <li><a href="/register.html"><i class="material-icons right">book</i>Register</a></li>
+      </ul>
+    </div>
+  </nav>
+  <img class="pulse" src="Library-Management-System/static/images/logo.jpg" style="position:absolute; height:15%;width:auto;border-radius:50%;top:3%;left:45%;box-shadow:5px;">
+  
+   <center>
+<h1 style="font-family: 'IM Fell Great Primer SC', serif;color:teal">Issue Page</h1>
+   </center>
+    <center>
+    <video id="preview"></video>
+   </center>
+   <div class="card">
+    <div class="row">
+      <table>
+        <thead>
+          <tr>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>ISBN</th>
+            <th>Publisher</th>
+            <th>Acc. No.</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr>
+          <td>Alvin</td>
+          <td>Eclair</td>
+          <td>$0.87</td>
+          <td>Eclair</td>
+          <td>$0.87</td>
+          </tr>
+          <tr>
+          <td>Alan</td>
+          <td>Jellybean</td>
+          <td>$3.76</td>
+          <td>Jellybean</td>
+          <td>$3.76</td>
+          </tr>
+          <tr>
+          <td>Jonathan</td>
+          <td>Lollipop</td>
+          <td>$7.00</td>
+          <td>Jellybean</td>
+          <td>$3.76</td>
+          </tr>
+        </tbody>
+        </table>
+</div>
+</div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>    
+
+    <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        alert(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+    </script>
+   
+</body>
+</html>
