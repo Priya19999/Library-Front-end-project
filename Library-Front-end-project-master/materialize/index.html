@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+	#myList{
+		font-size: 40px;
+	}
+	#abhi{
+		font-size: 40px;
+}
+</style>
+<body>
+<ul id="myList">
+  <li>Account Number</li>
+  <li>Book name</li>
+</ul>
+
+<div id="abhi">
+<button class="btn-floating btn-large waves-effect waves-light green" class="material-icons" onclick="locallod()" style="font-size:40px">click</button>
+</div>
+<script>
+function myFunction(ar) {
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(ar.name);
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node);
+
+}
+function locallod(){
+var xhttp= new XMLHttpRequest();
+ xhttp.onreadystatechange =function(){
+   if(this.readychange==4&&this.status==200){
+    document.getElementbyID("demo").innerHTML=xhttp.responceText;
+    var ar=http.responceText;
+    myfunction(ar);
+   }
+	
+};
+xhttp.open("GET",'www.jsonapi.org/articles?include=author&fields[articles]=title,body&fields[people]=name');
+xhttp.send();
+}
+</script>
+</body>
+</html>
